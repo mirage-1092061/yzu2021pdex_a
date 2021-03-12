@@ -1,20 +1,39 @@
-//
-// main.cpp
-// OOP_DEMO_CAR
-//
-// Created by wpfang on 2021/3/8.
-// Copyright © 2021 wpfang. All rights reserved.
-//
+/** @file CCAR
+  * @brief a file to practice class
+  * @author 1092061 陳友傑
+  * @since  110/3/10
+  * @version 1.0
+  */
+ 
 #include <iostream>
 #include <string>
 using namespace std;
+
+/** 宣告一個類別叫做ＣＣＡＲ
+  * 將其字串設為隱私(private)
+  * 且將其變數設為保護(protected)
+  * 並公開(public)其中之函式
+  * @param input nothing
+  * @param output nothing
+  * @return nothing 
+  */
 class CCAR {
 private:
-string nickname;
+/** 車子的名字
+  */
+private:
+string nickname; 
 protected:
+/** 車燈的數量
+  */
 int light;
+
+/** 車輪的數量
+  */
 int wheel;
+
 public:
+
 CCAR() :light(2)
 {
 wheel = 5;
@@ -44,6 +63,7 @@ cout << "car's turn" << endl;
 }
 };
 //--------------------------
+
 class CBMW : public CCAR {
 public:
 CBMW() { light = 4; wheel = 4; cout << "bmw's constructor" << endl; }
